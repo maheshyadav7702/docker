@@ -111,7 +111,7 @@ cat filename.txt
 6. docker inspect image nginx -> to inspect the particular acitivity ( ex: image, network, and etc)
 
 # container operations
-url -> https://www.youtube.com/watch?v=h6fQnzf3fXY&list=PLFoX_td1iTj-ATh48yU4qudcsLPi2kzv0&index=6
+# url -> https://www.youtube.com/watch?v=h6fQnzf3fXY&list=PLFoX_td1iTj-ATh48yU4qudcsLPi2kzv0&index=6
 7. docker images / docker image ls -> to see the docker images
 8. docker create nginx -> to create the container
 9. docker ps -> to see the only running containers

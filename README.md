@@ -137,3 +137,92 @@ cat filename.txt
 22. docker rm nginx_mahesh03 -> to remove the container
 23. docker rm nginx_mahesh03 --force -> not good practice
 24. docker rmi nginx / tagname of the image-> to remove the image (if don't have any reference, it will delete otherwise throw an error and will not remove the image from the list, based on the one image we can create multiple containers, so before removing it remove the all containers and do the remove image)
+
+
+# Docker Networking
+collections of devices established
+# types
+1. Bridge
+2. Host
+3. None
+
+# to see the networks in docker
+-> docker network ls
+# while creating the container by default it will connect to the Bridge network, if you want to give another network wantedly, you can give
+
+# create the container and accessing the network from out side
+# bridge
+-> docker run -d --name httpd01 -p 8080:80 httpd 
+
+# host
+-> docker run -d --name httpd02 --net host httpd
+
+# none
+-> docker run -d --name httpd02 --net none httpd
+
+# to delete the all containre at a time 
+-> docker ps rm containerid1 containerid2 containerid3
+
+# another method of creating the container
+docker container run -d --name nginx01 -p 80:80 nginx
+
+# plain images
+-> ubuntu, alpine, centos has the plain images, they create the docker file from scratch.
+
+
+# Docker file creation
+# From
+-> defines the base image used to start the build process.
+# ADD
+-> copies the files from a source on the host into the container's own filesystem at the set destination.
+# Copy
+-> copies the files from a source on the host into the container's own filesystem at the set destination.
+
+# difference b/w ADD and COPY
+-> If you ADD, in the source place, you can give the file of the url, ex: google drive file
+-> Unlike, if you use the COPY, that url will not work, within the folder/system only we can access the source file.
+-> ADD another advantage is we can take the zip file as also in the source place, what it will do na it extract and copy into the container.
+
+# CMD:
+-> can be used for executing a specific command within the container
+
+# ENTRYPOINT:
+sets a default application to be used every time a container is created with the image.
+
+# ENV:
+-> sets environment variables.
+
+# EXPOSE:
+-> associates a specific port to enable networking between the container and to the outside
+
+# MAINTAINER:
+-> defines a full name and email address of the image creator.
+
+# RUN:
+-> is the central executing directive for Dockerfiles.
+
+# USER:
+-> sets the UID (or username) which is to run the container.
+
+# VOLUME: 
+-> is used to enable access from the container to a directory on the host machine.
+
+# WORKDIR:
+-> sets the path where the command, defined with CMD, is to be executed.
+
+# LABEL:
+-> allow you to add a label to your docker image.
+
+# create the docker file through terminal
+
+-> check the images and containres -> docker images && docker ps -a
+-> create the folder ->  mkdir folder name
+->  add the code -> then ctrl + X -> will ask are u sure want to save y/n -> type Y and hit the enter
+-> ^ means ctrl button.
+-> to delete the file -> rm Dockerfiley
+-> then build the file, which you have created. -> docker build -t maheshyadav7702/ubuntuapache2 .
+
+
+
+# docker with terra form -> need to see
+https://www.youtube.com/watch?v=z5XW17BRh7k&pp=ygUbaG93IHRvIHJ1biBuZ2lueCBpbiB1YnVudHUg

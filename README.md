@@ -290,3 +290,6 @@ CMD [ "npm","run", "start" ]
 
 # mongoose with next js
 https://www.youtube.com/watch?v=bMHs2pHkbsM&pp=ygU5bmdpbnggNDAzIGZvcmJpZGRlbiBlcnJvciBmb3IgZG9ja2VyaXplZCBjb250YWluZXIgbmV4dGpz
+
+# next auth
+https://www.youtube.com/watch?v=Cm6-3pVCPEI&pp=ygU5bmdpbnggNDAzIGZvcmJpZGRlbiBlcnJvciBmb3IgZG9ja2VyaXplZCBjb250YWluZXIgbmV4dGpz

@@ -226,3 +226,67 @@ sets a default application to be used every time a container is created with the
 
 # docker with terra form -> need to see
 https://www.youtube.com/watch?v=z5XW17BRh7k&pp=ygUbaG93IHRvIHJ1biBuZ2lueCBpbiB1YnVudHUg
+
+
+# what is YAML
+1. YAML (YAML Ain't Markup Language) is a human-readable data serialization format.
+2. It is commonly used for configuration files and data exchange b/w systems.
+3. YAML is designed to be easy to read and write, making it popular among developers and system adminstrators.
+4. YAML used indentation to indicate the nesting of elements.
+5. Spaces are recomenede over tabs, the number of spaces for identation should be consistent throught out the file.
+6. Conventionally, two spaces are used, for indentation.
+# scalars:
+7. Scalars represents simple values, like strings, numbers, booleans, and null.
+8. Scalaras don't have any indentation and can be expressed directly.
+# Lists:
+9. Lists are represented by using a hypen (-) followed by a space.
+10. Lists can contain any combination of scalars, other lists, or mapings (key- value pairs).
+ex: 
+list_key:
+  - item1
+  - item2
+  - sublist:
+      - sub_item1
+      - sub_item2
+# Mappings:
+11. Mapping represents key-value pairs and use a colon (:) to separate the key from the value.
+12. Mapping can be nested within each other.
+# Multiline Scalars:
+13. If a scalar value spans multiple lines, you can use the | character to indicate a literal block scalar or > character to indicate a folder scalar.
+ex:
+multiline_key: |
+  This is a
+  multiline 
+  scalar value
+
+# tool for checking the yaml format
+-> yaml init
+
+# to create the new user in ubuntu
+
+login as root user
+create a user useradd user1
+create a password for a user passwd user1
+if you are using amazon ec2 linux add your user to wheel group by usermod -aG wheel user1
+then, try to login as your user su user1
+use any root command now sudo less /etc/shadow
+it Prompt for a password now enter it..
+
+
+# you must not run with sudo
+
+RUNNER_ALLOW_RUNASROOT="1" ./config.sh --url https://github.com/basobaasnepal/BasobaasWeb --token DFGFSDF234sf3fg45hd
+
+
+# nest  docker file
+
+FROM node:alpine3.18
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [ "npm","run", "start" ]
+
+# mongoose with next js
+https://www.youtube.com/watch?v=bMHs2pHkbsM&pp=ygU5bmdpbnggNDAzIGZvcmJpZGRlbiBlcnJvciBmb3IgZG9ja2VyaXplZCBjb250YWluZXIgbmV4dGpz

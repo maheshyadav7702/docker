@@ -293,3 +293,13 @@ https://www.youtube.com/watch?v=bMHs2pHkbsM&pp=ygU5bmdpbnggNDAzIGZvcmJpZGRlbiBlc
 
 # next auth
 https://www.youtube.com/watch?v=Cm6-3pVCPEI&pp=ygU5bmdpbnggNDAzIGZvcmJpZGRlbiBlcnJvciBmb3IgZG9ja2VyaXplZCBjb250YWluZXIgbmV4dGpz
+
+
+# url use full commands
+
+https://stackoverflow.com/questions/53293210/403-forbidden-nginx
+
+
+# to change the directory in the ubuntu
+
+docker exec -it mahesh-container sh
